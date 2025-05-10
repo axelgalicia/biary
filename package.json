@@ -1,0 +1,36 @@
+{
+  "name": "biary",
+  "version": "0.0.1",
+  "description": "A TUI Diary to store daily encrypted pages in binary format protected by a password key",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelgalicia/biary.git"
+  },
+  "keywords": [
+    "diary",
+    "binary",
+    "diary",
+    "biary"
+  ],
+  "author": "Axel Galicia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelgalicia/biary/issues"
+  },
+  "homepage": "https://github.com/axelgalicia/biary#readme",
+  "dependencies": {
+    "argon2": "^0.43.0",
+    "commander": "^13.1.0",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

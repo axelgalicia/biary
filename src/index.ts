@@ -1,0 +1,1 @@
+console.log('Biory App v0.0.1')
