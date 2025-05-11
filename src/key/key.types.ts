@@ -1,4 +1,4 @@
-import type { EncryptedKeyData } from "../common/utils.types";
+import type { EncryptedKeyData } from "../types";
 
 export interface EncryptedKeyFileData {
   username: string;

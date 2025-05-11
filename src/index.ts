@@ -1,10 +1,10 @@
-import { setupEncryptedKeyFileData } from "@key-utils/key.utils";
+import { setupEncryptedKeyFileData } from "@key/key";
 
 console.log('Biory App v0.0.1')
 
 const setupEncryptedKeyFileDataExe = async () => {
   await setupEncryptedKeyFileData(
-    'axel',
+    'sabrine',
     'password',
   );
 };

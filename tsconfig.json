@@ -17,7 +17,7 @@
     "paths": {
       "@crypto-utils/*": ["src/utils/crypto/*"],
       "@file-utils/*": ["src/utils/file/*"],
-      "@key-utils/*": ["src/utils/key/*"]
+      "@key/*": ["src/key/*"]
     }
   },
   // Include the necessary files for your project

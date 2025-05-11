@@ -22,11 +22,11 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// src/utils/key/key.utils.ts
+// src/key/key.ts
 var fs = __toESM(require("fs"));
 var import_node_path = __toESM(require("path"));
 
-// src/utils/common/utils.constants.ts
+// src/constants.ts
 var AES_KEY_SIZE = 32;
 
 // src/utils/crypto/crypto.constants.ts
@@ -67,12 +67,12 @@ var generateEncryptedKeyData = async (password) => {
   return encryptedKeyData;
 };
 
-// src/utils/key/key-constants.ts
+// src/key/key-constants.ts
 var VAULT_DIR_NAME = ".vault";
 var KEY_FILE_EXTENSION = ".json";
 var KEY_FILE_PREFIX_NAME = "biory-key";
 
-// src/utils/key/key.utils.ts
+// src/key/key.ts
 var VAULT_DIR = import_node_path.default.join(__dirname, "../", VAULT_DIR_NAME);
 var getKeyFilePathByUsername = (username) => {
   const fileName = `${username}-${KEY_FILE_PREFIX_NAME}${KEY_FILE_EXTENSION}`;
@@ -81,8 +81,8 @@ var getKeyFilePathByUsername = (username) => {
 var createVaultDirectoryIfRequired = () => {
   if (!fs.existsSync(VAULT_DIR)) {
     fs.mkdirSync(VAULT_DIR);
+    console.log(`Biory App: Vault directory created at ${VAULT_DIR}`);
   }
-  console.log(`Biory App: Vault directory created at ${VAULT_DIR}`);
 };
 var generateRecoveryCodeString = () => {
   const randomBytes = getRandomBytes(AES_KEY_SIZE);
@@ -117,7 +117,7 @@ var setupEncryptedKeyFileData = async (username, password) => {
 console.log("Biory App v0.0.1");
 var setupEncryptedKeyFileDataExe = async () => {
   await setupEncryptedKeyFileData(
-    "axel",
+    "sabrine",
     "password"
   );
 };

@@ -1,20 +1,20 @@
 /**
- * Utility functions for managing encrypted key files in the Biory application.
+ * Functions for managing encrypted key files in the Biory application.
  * This module provides functionality to create, store, and retrieve encrypted key files,
  * as well as generate recovery codes and manage the vault directory.
  */
 
 import * as fs from "node:fs";
 import path from "node:path";
-import { AES_KEY_SIZE } from "../common/utils.constants";
-import type { EncryptedKeyData } from "../common/utils.types";
-import { UTF8_ENCODING } from "../crypto/crypto.constants";
+import { AES_KEY_SIZE } from "../constants";
+import type { EncryptedKeyData } from "../types";
+import { UTF8_ENCODING } from "../utils/crypto/crypto.constants";
 import {
   convertToHex,
   decryptKeyData,
   generateEncryptedKeyData,
   getRandomBytes,
-} from "../crypto/crypto.utils";
+} from "../utils/crypto/crypto.utils";
 import {
   KEY_FILE_EXTENSION,
   KEY_FILE_PREFIX_NAME,

@@ -15,8 +15,8 @@ import {
   SALT_SIZE,
 } from "./crypto.constants";
 
-import type { EncryptedKeyData } from "../common/utils.types";
-import { AES_KEY_SIZE } from "../common/utils.constants";
+import type { EncryptedKeyData } from "../../types";
+import { AES_KEY_SIZE } from "../../constants";
 
 /**
  * Generates a buffer of random bytes of the specified size.

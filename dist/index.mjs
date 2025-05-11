@@ -6,10 +6,10 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// src/utils/common/utils.constants.ts
+// src/constants.ts
 var AES_KEY_SIZE;
-var init_utils_constants = __esm({
-  "src/utils/common/utils.constants.ts"() {
+var init_constants = __esm({
+  "src/constants.ts"() {
     "use strict";
     AES_KEY_SIZE = 32;
   }
@@ -36,7 +36,7 @@ var init_crypto_utils = __esm({
   "src/utils/crypto/crypto.utils.ts"() {
     "use strict";
     init_crypto_constants();
-    init_utils_constants();
+    init_constants();
     getRandomBytes = (size) => {
       return crypto.randomBytes(size);
     };
@@ -67,10 +67,10 @@ var init_crypto_utils = __esm({
   }
 });
 
-// src/utils/key/key-constants.ts
+// src/key/key-constants.ts
 var VAULT_DIR_NAME, KEY_FILE_EXTENSION, KEY_FILE_PREFIX_NAME;
 var init_key_constants = __esm({
-  "src/utils/key/key-constants.ts"() {
+  "src/key/key-constants.ts"() {
     "use strict";
     VAULT_DIR_NAME = ".vault";
     KEY_FILE_EXTENSION = ".json";
@@ -78,14 +78,14 @@ var init_key_constants = __esm({
   }
 });
 
-// src/utils/key/key.utils.ts
+// src/key/key.ts
 import * as fs from "node:fs";
 import path from "node:path";
 var VAULT_DIR, getKeyFilePathByUsername, createVaultDirectoryIfRequired, generateRecoveryCodeString, setupEncryptedKeyFileData;
-var init_key_utils = __esm({
-  "src/utils/key/key.utils.ts"() {
+var init_key = __esm({
+  "src/key/key.ts"() {
     "use strict";
-    init_utils_constants();
+    init_constants();
     init_crypto_constants();
     init_crypto_utils();
     init_key_constants();
@@ -97,8 +97,8 @@ var init_key_utils = __esm({
     createVaultDirectoryIfRequired = () => {
       if (!fs.existsSync(VAULT_DIR)) {
         fs.mkdirSync(VAULT_DIR);
+        console.log(`Biory App: Vault directory created at ${VAULT_DIR}`);
       }
-      console.log(`Biory App: Vault directory created at ${VAULT_DIR}`);
     };
     generateRecoveryCodeString = () => {
       const randomBytes = getRandomBytes(AES_KEY_SIZE);
@@ -134,11 +134,11 @@ var init_key_utils = __esm({
 // src/index.ts
 var require_index = __commonJS({
   "src/index.ts"() {
-    init_key_utils();
+    init_key();
     console.log("Biory App v0.0.1");
     var setupEncryptedKeyFileDataExe = async () => {
       await setupEncryptedKeyFileData(
-        "axel",
+        "sabrine",
         "password"
       );
     };
