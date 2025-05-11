@@ -4,7 +4,7 @@ console.log('Biory App v0.0.1 (Beta)')
 
 const setupEncryptedKeyFileDataExe = async () => {
   await setupEncryptedKeyFileData(
-    'sabrine',
+    'testuser',
     'password',
   );
 };
