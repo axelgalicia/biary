@@ -2,9 +2,10 @@
   "name": "biary",
   "version": "0.0.1",
   "description": "A TUI Diary to store daily encrypted pages in binary format protected by a password key",
-  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "build": "rm -rf dist/ && tsup src/index.ts --format cjs,esm --dts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,7 +15,6 @@
   "keywords": [
     "diary",
     "binary",
-    "diary",
     "biary"
   ],
   "author": "Axel Galicia",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
-    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.3"
   }
 }

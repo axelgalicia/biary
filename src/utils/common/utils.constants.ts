@@ -1,0 +1,1 @@
+export const AES_KEY_SIZE = 32; // 256 bits

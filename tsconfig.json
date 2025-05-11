@@ -1,17 +1,33 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
-    "strict": true,
+    // Base Options recommended for all projects
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "es2022",
+    "allowJs": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "moduleDetection": "force",
+    // Enable strict type checking so you can catch bugs early
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    // Transpile our TypeScript code to JavaScript
+    "module": "NodeNext",
+    "baseUrl": "./",
+    "paths": {
+      "@crypto-utils/*": ["src/utils/crypto/*"],
+      "@file-utils/*": ["src/utils/file/*"],
+      "@key-utils/*": ["src/utils/key/*"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  // Include the necessary files for your project
+  "include": [
+    "src/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+  ]
 }

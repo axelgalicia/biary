@@ -1,6 +1,5 @@
 // AES encryption parameters
 export const AES_256_GCM_ALGORITHM = 'aes-256-gcm'; // AES algorithm
-export const AES_KEY_SIZE = 32; // 256 bits
 export const AES_IV_SIZE = 12; // 96 bits
 export const AES_TAG_SIZE = 16; // 128 bits
 export const SALT_SIZE = 16; // 128 bits

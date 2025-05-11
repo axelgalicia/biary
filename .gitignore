@@ -1,3 +1,2 @@
 node_modules/*
-key.json
-.vault/
+*biory-key.json
