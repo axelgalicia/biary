@@ -2,7 +2,7 @@
 
 ![Biary Logo](./logo/biary_logo.png)
 
-Biary is a Terminal User Interface (TUI) Diary application that allows you to securely store your diary entries in encrypted binary files. Each entry is protected with a unique password key, ensuring your personal thoughts remain private. 🛡️
+Biary is an Electron App Diary that allows you to securely store your diary entries in encrypted binary files. Each entry is protected with a unique password key, ensuring your personal thoughts remain private. 🛡️
 
 **Note:** This is a work-in-progress beta version. Features and functionality are subject to change. 🚧
 
